@@ -10,4 +10,12 @@ public class HelloWorld {
       System.out.println("Your Message : " + message);
    }
 
+   public void init(){
+	   System.out.println("Initializing helloWorld Bean!");
+   }
+
+   public void destroy(){
+	   System.out.println("Bean Destroyed!");
+   }
+
 }
