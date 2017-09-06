@@ -1,17 +1,17 @@
 package com.tutorialspoint;
 
-//import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.ApplicationContext;
+//import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainApp {
    public static void main(String[] args) {
-	   AbstractApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
-      HelloWorld obj = (HelloWorld) context.getBean("beanId");
-      obj.getMessage();
+	   ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
+	      JavaCollection jc=(JavaCollection)context.getBean("javaCollection");
 
-      greet greetObj = (greet) context.getBean("greetBean");
-      System.out.println(greetObj.getMessage());
-      context.registerShutdownHook();
+	      jc.getAddressList();
+	      jc.getAddressSet();
+	      jc.getAddressMap();
+	      jc.getAddressProp();
    }
 }
